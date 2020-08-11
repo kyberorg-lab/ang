@@ -15,3 +15,4 @@ COPY --from=ANGULAR_BUILD /webapp/dist/webapp/* ./webapp/dist/webapp/
 COPY --from=GO_BUILD /go/bin/server ./
 RUN ls
 CMD ./server
+EXPOSE 8080
