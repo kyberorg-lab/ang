@@ -5,15 +5,15 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {CarComponent} from './components/car/car.component';
 import {FormsModule} from '@angular/forms';
-import {KontaktsComponent} from './components/kontakts/kontakts.component';
-import {CardComponent} from './components/card/card.component';
+import { IndexComponent } from './components/index/index.component';
+import { HeroesComponent } from './components/heroes/heroes.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         CarComponent,
-        KontaktsComponent,
-        CardComponent,
+        IndexComponent,
+        HeroesComponent,
     ],
     imports: [
         BrowserModule,

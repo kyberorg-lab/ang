@@ -1,13 +1,13 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {CarComponent} from './components/car/car.component';
-import {KontaktsComponent} from './components/kontakts/kontakts.component';
-import {CardComponent} from './components/card/card.component';
+import {IndexComponent} from './components/index/index.component';
+import {HeroesComponent} from './components/heroes/heroes.component';
 
 const routes: Routes = [
-    {path: '', component: CarComponent},
-    {path: 'about', component: KontaktsComponent},
-    {path: 'card', component: CardComponent},
+    {path: '', component: IndexComponent},
+    {path: 'cars', component: CarComponent},
+    {path: 'heroes', component: HeroesComponent},
 ];
 
 @NgModule({
