@@ -7,7 +7,6 @@ import {CarComponent} from './components/car/car.component';
 import {FormsModule} from '@angular/forms';
 import {KontaktsComponent} from './components/kontakts/kontakts.component';
 import {CardComponent} from './components/card/card.component';
-import {FormComponent} from './components/form/form.component';
 
 @NgModule({
     declarations: [
@@ -15,7 +14,6 @@ import {FormComponent} from './components/form/form.component';
         CarComponent,
         KontaktsComponent,
         CardComponent,
-        FormComponent
     ],
     imports: [
         BrowserModule,
