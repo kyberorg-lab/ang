@@ -15,9 +15,21 @@
         </ul>
     </div>
     <h5>Extras</h5>
+    <form (submit)="addExtra(newExtra.value)">
+        <div class="form-group">
+            <label for="option">New extra</label>
+            <input type="text" id="option" placeholder="Enter new extra" class="form-control" #newExtra>
+            <br>
+            <button type="submit" class=" btn btn-outline-success">Add</button>
+        </div>
+    </form>
+
     <div class="alert alert-warning">
         <ul>
-            <li *ngFor="let opt of options"> {{opt}}</li>
+            <li *ngFor="let opt of options">
+                {{opt}}
+            <button class="btn btn-warning btn-sm" (click)="deleteExtra(opt)">X</button>
+            </li>
         </ul>
     </div>
 

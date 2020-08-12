@@ -82,6 +82,20 @@ export class CarComponent implements OnInit {
             }
         }
     }
+
+    addExtra(extra: string): boolean {
+        this.options.unshift(extra);
+        return false;
+    }
+
+    deleteExtra(opt: string): void {
+        for (let i = 0; i < this.options.length; i++) {
+            if (this.options[i] === opt) {
+                this.options.splice(i, 1);
+                break;
+            }
+        }
+    }
 }
 
 interface Colors {
