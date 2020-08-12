@@ -1,17 +1,11 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {CarComponent} from './components/car/car.component';
 import {FormsModule} from '@angular/forms';
 import {KontaktsComponent} from './components/kontakts/kontakts.component';
-
-const appRoutes: Routes = [
-    {path: '', component: CarComponent},
-    {path: 'about', component: KontaktsComponent}
-];
 
 @NgModule({
     declarations: [
@@ -22,8 +16,7 @@ const appRoutes: Routes = [
     imports: [
         BrowserModule,
         AppRoutingModule,
-        FormsModule,
-        RouterModule.forRoot(appRoutes)
+        FormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]
