@@ -16,6 +16,7 @@ export class CarComponent implements OnInit {
         fuel: Fuel,
     };
     options: string[];
+    isEdit = false;
 
     constructor() {
     }
@@ -34,10 +35,6 @@ export class CarComponent implements OnInit {
             fuel: Fuel.BENSIN
         };
         this.options = ['ABS', '4WD'];
-    }
-
-    onMitsubishiSelect(): void {
-
     }
 
     onAutoSelect(auto: string): void {
@@ -95,6 +92,10 @@ export class CarComponent implements OnInit {
                 break;
             }
         }
+    }
+
+    showEdit(): void {
+        this.isEdit = !this.isEdit;
     }
 }
 

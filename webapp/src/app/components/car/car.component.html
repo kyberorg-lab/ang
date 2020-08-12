@@ -14,6 +14,21 @@
             <li>Wheel Color: <strong>{{colors.wheels}}</strong></li>
         </ul>
     </div>
+
+    <h5>Edit Auto</h5>
+    <button class="btn btn-danger" (click)="showEdit()">Edit</button>
+    <div><br></div>
+    <form *ngIf="isEdit">
+        <div class="form-group">
+            <input type="text" placeholder="Auto name" [(ngModel)]="name" name="name"><br>
+            <input type="text" placeholder="Auto model" [(ngModel)]="model" name="model"><br>
+            <input type="text" placeholder="Speed" [(ngModel)]="speed" name="speed"><br>
+            <input type="text" placeholder="Auto color" [(ngModel)]="colors.car" name="car-color"><br>
+            <input type="text" placeholder="Salon color" [(ngModel)]="colors.salon" name="salon-color"><br>
+            <input type="text" placeholder="Wheels color" [(ngModel)]="colors.wheels" name="wheels-color"><br>
+        </div>
+    </form>
+
     <h5>Extras</h5>
     <form (submit)="addExtra(newExtra.value)">
         <div class="form-group">
@@ -28,7 +43,7 @@
         <ul>
             <li *ngFor="let opt of options">
                 {{opt}}
-            <button class="btn btn-warning btn-sm" (click)="deleteExtra(opt)">X</button>
+                <button class="btn btn-warning btn-sm" (click)="deleteExtra(opt)">X</button>
             </li>
         </ul>
     </div>
