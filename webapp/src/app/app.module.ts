@@ -7,6 +7,7 @@ import {CarComponent} from './components/car/car.component';
 import {FormsModule} from '@angular/forms';
 import { IndexComponent } from './components/index/index.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
+import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
 
 @NgModule({
     declarations: [
@@ -14,6 +15,7 @@ import { HeroesComponent } from './components/heroes/heroes.component';
         CarComponent,
         IndexComponent,
         HeroesComponent,
+        HeroDetailComponent,
     ],
     imports: [
         BrowserModule,
