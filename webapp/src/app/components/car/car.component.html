@@ -1,1 +1,28 @@
-<p>{{model}} works!</p>
+<div class="container">
+    <br>
+    <h4>
+        <mark>Auto:</mark>
+        {{name}}
+        <small>{{model}}</small>
+    </h4>
+    <div class="alert alert-success">
+        Specs:
+        <ul>
+            <li>Speed: <strong>{{speed}}</strong> kmh</li>
+            <li>Auto Color: <strong>{{colors.car}}</strong></li>
+            <li>Salon Color: <strong>{{colors.salon}}</strong></li>
+            <li>Wheel Color: <strong>{{colors.wheels}}</strong></li>
+        </ul>
+    </div>
+    <h5>Extras</h5>
+    <div class="alert alert-warning">
+        <ul>
+            <li *ngFor="let opt of options"> {{opt}}</li>
+        </ul>
+    </div>
+
+    <h5>Select auto</h5>
+    <button class="btn btn-danger" (click)="onAutoSelect('BMW')">BMW</button>
+    <button class="btn btn-light" (click)="onAutoSelect('UAZ')">UAZ</button>
+    <button class="btn btn-dark" (click)="onAutoSelect('Mitsubishi')">Mitsubishi</button>
+</div>

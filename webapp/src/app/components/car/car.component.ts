@@ -13,7 +13,7 @@ export class CarComponent implements OnInit {
     colors: Colors;
     engine: {
         volume: number,
-        fuel: string,
+        fuel: Fuel,
     };
     options: string[];
 
@@ -31,9 +31,56 @@ export class CarComponent implements OnInit {
         };
         this.engine = {
             volume: 2.7,
-            fuel: 'bensin'
+            fuel: Fuel.BENSIN
         };
         this.options = ['ABS', '4WD'];
+    }
+
+    onMitsubishiSelect(): void {
+
+    }
+
+    onAutoSelect(auto: string): void {
+        switch (auto) {
+            case 'BMW': {
+                this.name = 'BMW';
+                this.speed = 270;
+                this.model = 'X5';
+                this.colors = {
+                    car: 'Black',
+                    salon: 'Green',
+                    wheels: 'Black'
+                };
+                this.engine = {
+                    volume: 4.7,
+                    fuel: Fuel.DIESEL
+                };
+                this.options = ['ABS', '4WD', 'AutoPilot'];
+                break;
+            }
+
+            case 'Mitsubishi': {
+                this.name = 'Mitsubishi';
+                this.speed = 200;
+                this.model = 'Pajero';
+                this.colors = {
+                    car: 'Black',
+                    salon: 'Grey',
+                    wheels: 'White'
+                };
+                this.engine = {
+                    volume: 3.2,
+                    fuel: Fuel.DIESEL
+                };
+                this.options = ['ABS', '4WD', 'SuperSelect'];
+                break;
+            }
+
+            case 'UAZ': {
+                this.ngOnInit();
+                break;
+            }
+        }
     }
 }
 
@@ -41,4 +88,9 @@ interface Colors {
     car: string;
     salon: string;
     wheels: string;
+}
+
+enum Fuel {
+    BENSIN,
+    DIESEL
 }
