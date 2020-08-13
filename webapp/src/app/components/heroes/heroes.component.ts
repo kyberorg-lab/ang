@@ -15,6 +15,7 @@ export class HeroesComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        this.getHeroes();
     }
 
     getHeroes(): void {
