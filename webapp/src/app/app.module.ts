@@ -9,6 +9,8 @@ import {IndexComponent} from './components/index/index.component';
 import {HeroesComponent} from './components/heroes/heroes.component';
 import {HeroDetailComponent} from './components/hero-detail/hero-detail.component';
 import {MessagesComponent} from './components/messages/messages.component';
+import {HeroDashboardComponent} from './components/hero-dashboard/hero-dashboard.component';
+import {HeroAppComponent} from './components/hero-app/hero-app.component';
 
 @NgModule({
     declarations: [
@@ -18,6 +20,8 @@ import {MessagesComponent} from './components/messages/messages.component';
         HeroesComponent,
         HeroDetailComponent,
         MessagesComponent,
+        HeroDashboardComponent,
+        HeroAppComponent,
     ],
     imports: [
         BrowserModule,
