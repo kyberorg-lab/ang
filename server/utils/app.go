@@ -2,11 +2,15 @@ package utils
 
 import "github.com/gin-gonic/gin"
 
-func SetJsonHeader(context *gin.Context) {
-	context.Header("Content-Type", "application/json")
+type HttpUtils struct {
+	Context *gin.Context
+}
+
+func (u *HttpUtils) SetJsonHeader() {
+	u.Context.Header("Content-Type", "application/json")
 
 }
 
-func SendError(context *gin.Context, code int, message string) {
-	context.JSON(code, gin.H{"error": message})
+func (u *HttpUtils) SendError(code int, message string) {
+	u.Context.JSON(code, gin.H{"error": message})
 }

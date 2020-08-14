@@ -23,9 +23,13 @@ func init() {
 }
 
 func setupRoutes() {
-	apiGroup := router.Group("/api")
+	heroesApiGroup := router.Group("/api/heroes")
+	heroApi := api.HeroApi{}
 	{
-		apiGroup.GET("/heroes", api.GetAllHeroes)
+		heroesApiGroup.GET("", heroApi.GetAllHeroes)
+		heroesApiGroup.POST("", heroApi.AddHero)
+		heroesApiGroup.PUT(":id", heroApi.UpdateHero)
+		heroesApiGroup.DELETE(":id", heroApi.DeleteHero)
 	}
 
 	router.NoRoute(serveStatic)
