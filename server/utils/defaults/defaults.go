@@ -1,6 +1,6 @@
 package defaults
 
 const (
-	DatabaseFile    = "ang.db"
+	DatabaseFile    = ":memory:"
 	DatabaseDialect = "sqlite3"
 )

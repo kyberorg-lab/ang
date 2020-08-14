@@ -3,6 +3,7 @@ package database
 import (
 	"fmt"
 	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/sqlite"
 	"github.com/kyberorg/ang/database/model"
 	"github.com/kyberorg/ang/utils/defaults"
 	"github.com/kyberorg/ang/utils/env"
