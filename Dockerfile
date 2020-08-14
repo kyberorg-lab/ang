@@ -4,7 +4,7 @@ COPY webapp /webapp
 WORKDIR webapp
 RUN npm install && ng build --prod
 
-FROM golang:1.14.7-alpine AS GO_BUILD
+FROM golang:1.14.7 AS GO_BUILD
 COPY server /server
 WORKDIR /server
 RUN go build -o /go/bin/server
