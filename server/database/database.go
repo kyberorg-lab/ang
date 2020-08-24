@@ -23,6 +23,7 @@ func InitDatabase() {
 
 	DBConn, err = gorm.Open(defaults.DatabaseDialect, dbFile)
 	if err != nil {
+		fmt.Println("Error " + err.Error() + " DB File: " + dbFile)
 		panic("Failed to connect to database")
 	}
 	fmt.Println("Database successfully connected. Database location:", dbFile)
