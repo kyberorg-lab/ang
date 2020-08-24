@@ -4,15 +4,19 @@ COPY webapp /webapp
 WORKDIR webapp
 RUN npm install && ng build --prod
 
-FROM golang:1.14.7-alpine AS GO_BUILD
-COPY server /server
-WORKDIR /server
-RUN go build -o /go/bin/server
+FROM golang:1.14.7 AS GO_BUILD
+COPY server /
+WORKDIR /
+
+COPY server/go.mod server/go.sum ./
+RUN go mod download
+
+# Copy sources from current dir to Container
+COPY server /
+RUN go build -a -ldflags '-extldflags "-static"' -o /server main.go
 
 FROM alpine:3.12
-WORKDIR app
 COPY --from=ANGULAR_BUILD /webapp/dist/webapp/* ./webapp/dist/webapp/
-COPY --from=GO_BUILD /go/bin/server ./
-RUN ls
+COPY --from=GO_BUILD /server ./
 CMD ./server
 EXPOSE 8080
