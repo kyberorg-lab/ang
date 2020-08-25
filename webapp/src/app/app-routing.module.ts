@@ -6,6 +6,7 @@ import {HeroDashboardComponent} from './components/hero-dashboard/hero-dashboard
 import {HeroesComponent} from './components/heroes/heroes.component';
 import {HeroDetailComponent} from './components/hero-detail/hero-detail.component';
 import {HeroAppComponent} from './components/hero-app/hero-app.component';
+import {NotesComponent} from './components/notes/notes.component';
 
 const routes: Routes = [
     {path: '', component: IndexComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
             {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
         ]
     },
+    {path: 'notes', component: NotesComponent},
 ];
 
 @NgModule({

@@ -11,6 +11,7 @@ import {HeroDetailComponent} from './components/hero-detail/hero-detail.componen
 import {MessagesComponent} from './components/messages/messages.component';
 import {HeroDashboardComponent} from './components/hero-dashboard/hero-dashboard.component';
 import {HeroAppComponent} from './components/hero-app/hero-app.component';
+import {NotesComponent} from './components/notes/notes.component';
 
 @NgModule({
     declarations: [
@@ -22,6 +23,7 @@ import {HeroAppComponent} from './components/hero-app/hero-app.component';
         MessagesComponent,
         HeroDashboardComponent,
         HeroAppComponent,
+        NotesComponent,
     ],
     imports: [
         BrowserModule,
